@@ -67,8 +67,8 @@ def FiguraFelismeres(figura, threshold, readMethod1, readMethod2):
 
 		#cv.imshow('Matches', result)
 		#cv.waitKey()
-		#cv.imshow('Matches', haystack_img)
-		#cv.waitKey()
+		cv.imshow('Matches', haystack_img)
+		cv.waitKey()
 	else:
 	    print(f'Needle not found: {figura}')
 
@@ -123,17 +123,18 @@ def Elhelyezkedes():
 
 			for i in range(len(column)):
 				if eltaroltSzam in column[i]:
-					print(f"column[1]: {column[i]}, index: {column.index(column[i])+1}")
+					#print(f"column[1]: {column[i]}, index: {column.index(column[i])+1}")
+					SorSzamLista.append(column.index(column[i])+1)
 
 
 		if any(x[0] == eltaroltSzam for x in a_column):
-			pozicioLista.append('A' + str())
+			pozicioLista.append('A' + str(SorSzamLista[babuSzamlalo]))
 		elif any(x[0] == eltaroltSzam for x in b_column):
-			pozicioLista.append('B' + str())
+			pozicioLista.append('B' + str(SorSzamLista[babuSzamlalo]))
 		elif any(x[0] == eltaroltSzam for x in c_column):
-			pozicioLista.append('C' + str())
+			pozicioLista.append('C' + str(SorSzamLista[babuSzamlalo]))
 		elif any(x[0] == eltaroltSzam for x in d_column):
-			pozicioLista.append('D' + str())
+			pozicioLista.append('D' + str(SorSzamLista[babuSzamlalo]))
 
 
 
